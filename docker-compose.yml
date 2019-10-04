@@ -1,0 +1,8 @@
+version: "2.4"
+services:
+  musiclibrary:
+    image: ${IMAGE:-musiclibrary:latest}
+    ports:
+      - "${PORT:-8090}:8090"
+    environment:
+      JAVA_OPTS: "-Dspring.profiles.active=dev"
